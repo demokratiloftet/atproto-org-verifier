@@ -4,16 +4,21 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  zod: 4.6.6
+  fast-uri@<3.1.9: 3.1.9
+  fast-uri@>=4.0.0 <4.2.3: 4.2.3
+
 importers:
 
   .:
     dependencies:
       '@atproto-labs/fetch-node':
-        specifier: 0.4.0
-        version: 0.4.0
+        specifier: 0.4.5
+        version: 0.4.5
       '@atproto/api':
-        specifier: 0.24.0
-        version: 0.24.0
+        specifier: 0.28.0
+        version: 0.28.0
       '@atproto/common':
         specifier: 0.8.5
         version: 0.8.5
@@ -21,14 +26,14 @@ importers:
         specifier: 0.5.16
         version: 0.5.16
       '@atproto/syntax':
-        specifier: 0.7.6
-        version: 0.7.6
+        specifier: 0.7.7
+        version: 0.7.7
       '@streamparser/json-node':
         specifier: 0.0.26
         version: 0.0.26
       fastify:
-        specifier: 5.12.5
-        version: 5.12.5
+        specifier: 5.12.7
+        version: 5.12.7
       tldts:
         specifier: 7.4.18
         version: 7.4.18
@@ -37,8 +42,8 @@ importers:
         specifier: 24.19.1
         version: 24.19.1
       prettier:
-        specifier: 3.9.9
-        version: 3.9.9
+        specifier: 3.9.10
+        version: 3.9.10
       tsx:
         specifier: 4.23.15
         version: 4.23.15
@@ -48,24 +53,28 @@ importers:
 
 packages:
 
-  '@atproto-labs/fetch-node@0.4.0':
-    resolution: {integrity: sha512-5Yi8fz/JDGEoObRgRJuglcodB/MJeQnnoqokOGSQK5ItISObSttbGIgHE1UMU1njcwxbvKtbGMWHUCRgqML2Dw==}
+  '@atproto-labs/fetch-node@0.4.5':
+    resolution: {integrity: sha512-uHsGTiC0q6FD7dHgGDNgGNmFWb+Wr2xd/AdZXi2gXq9hdgq6apnSoMCNlhYGp2s2NdXEKUNcZLIJImN9qrPLbA==}
     engines: {node: '>=22'}
 
-  '@atproto-labs/fetch@0.3.6':
-    resolution: {integrity: sha512-ro/J/cnqIp4bnSzDl8N3SkruvQcE3Pze+1H70mKdFfyFcdhPr+7O4lggl4VCbhI84Yqgz47c0xC6F/Yl39SxDA==}
+  '@atproto-labs/fetch@0.4.3':
+    resolution: {integrity: sha512-Da747rqMhHOSbwEBUfpyCpg3kKwhPZNGLNTFBVc/JQ+KTsDmUy64quRwFqXEy+pd8xoaQ0fodaLDHGbD/LNK7Q==}
     engines: {node: '>=22'}
 
-  '@atproto-labs/pipe@0.2.4':
-    resolution: {integrity: sha512-n67jCcrC+ouAeO10cWkpPzzLMlDi/lDCU30Us+LGqhOPhT6c4t5ASdBLQi9W3jUQtRzQBt3G9zipF+xKWNvVbw==}
+  '@atproto-labs/pipe@0.2.5':
+    resolution: {integrity: sha512-1R1nYs/nHmBcYa4yzTjk5H/46MF5nZm342Ha9kKQTOMp/fr2Yn67qD1pTXUS7L2Mx8AEf3m7Z/TTxRfnERLc8w==}
     engines: {node: '>=22'}
 
-  '@atproto/api@0.24.0':
-    resolution: {integrity: sha512-K2x5CCiS+ZLxcdrrBXov53Ib+Lql4MnjEFmJbXaXT494t4tUN++7j+mC3ZfVZFyX1i7RAb9i53dE4auX9bwBKA==}
+  '@atproto/api@0.28.0':
+    resolution: {integrity: sha512-u2qjG4rLT1JazUKZ1MmaVZ+oEmUxc2l40RO/TGxHBhWoz8GKpzzHstOOBwpdcfPcSsndYFdMm22LCMPARHp2Rw==}
     engines: {node: '>=22'}
 
   '@atproto/common-web@0.5.14':
     resolution: {integrity: sha512-eJEgJVI61n5t/ieluVOxaEl16hWKipvy60SWOLcISanOywvEW5MkOeeg4PVeYqntBvYn1ldZiNHDrFsEyt6+Jg==}
+    engines: {node: '>=22'}
+
+  '@atproto/common-web@0.5.20':
+    resolution: {integrity: sha512-DluUg40waDOEG7EVaBreiEkNkXlJ1mUvhCrZjuXewUZj78dbmQ19nztgNcgqZ1viHOhiZ5gpH1JkykhnQNjKvA==}
     engines: {node: '>=22'}
 
   '@atproto/common@0.8.5':
@@ -84,24 +93,36 @@ packages:
     resolution: {integrity: sha512-3v68HO94wbE/2ZNejTSseb4ZkpjayxU4SmGy/s5zfpG8q1mNCvKcu9B1043yO+RCrE5BsOBiaRMituifbPiy3Q==}
     engines: {node: '>=22'}
 
+  '@atproto/lex-data@0.1.11':
+    resolution: {integrity: sha512-m4fZaj9tGcGlRdsP9fLr8+UCutv8ahClYNGkrS+29ZGcen9E4336wggUyzq/XTOKo69Qa2FRVG79pareXh7mFQ==}
+    engines: {node: '>=22'}
+
   '@atproto/lex-data@0.1.8':
     resolution: {integrity: sha512-RuCIPXGT9sesyPC0frQgpXGD9egucqRjDRqQ8SPXEp+C6bO6EiXA1cAxNw83F1kpTLhtt6AJUaH/s8u0N7ip7g==}
+    engines: {node: '>=22'}
+
+  '@atproto/lex-json@0.1.11':
+    resolution: {integrity: sha512-ZsU6qtE0eM5P+gzdZseHwRjOAXIt8K5Q+5Q+clMo6y0VV72ieTUK5WcffNFkj6+NUJIBKGy3QmlbnI6eu4xBZA==}
     engines: {node: '>=22'}
 
   '@atproto/lex-json@0.1.7':
     resolution: {integrity: sha512-4ABSfAkv+zLiPHvexZ7n/xR8wCLShbpEqcGxvniejZGsFrms980nl+BOaWPuU+OgLRNzpicMwSVOYDF6X62IHg==}
     engines: {node: '>=22'}
 
-  '@atproto/lexicon@0.7.16':
-    resolution: {integrity: sha512-iZ7LI/EfrQ++DAD4G4OrnB6tNHs+x3Qf5dxyXdLYOxjdjp5SjH2lipL/ecQxUMn9q/4eEkqEC0rvyx4eZd772w==}
+  '@atproto/lexicon@0.7.22':
+    resolution: {integrity: sha512-rtQVHinp+JaxVrB15UJo2DFXpnXJ/WaFxryEFFbuefyfXdtIxmouESS47WfkT8DxfJdKBiHWLibCcQOw99adKQ==}
     engines: {node: '>=22'}
 
-  '@atproto/syntax@0.7.6':
-    resolution: {integrity: sha512-luKQTcWw1H1jLmYvX34ldBqNjz2orF082njmcF9fxbWTqVhsO+TpY0FHRKVPoV7dwL0Y3L16DNz1ma0LFGH25g==}
+  '@atproto/syntax@0.7.7':
+    resolution: {integrity: sha512-MJ+QUo8yzAGP2SOQKs2CBI2ouY5KaO9Pv5a7laX3xtrkfWmS/s96L/FCJm5VBHEvKXmd6ap/HSGypYclQcfoWA==}
     engines: {node: '>=22'}
 
-  '@atproto/xrpc@0.8.15':
-    resolution: {integrity: sha512-WEH4L1Sf9e5YiMDwBTCj3NOtDquB+AlWyQ/BpfRyLqNuYIOLcf3N2LXJodoap50KjG5j9SDLg3RmJ/Ack0t7jA==}
+  '@atproto/syntax@0.7.9':
+    resolution: {integrity: sha512-jC4JsFc2MdDS69+AuLdJo2dyI1K4UJiCn5ys77Ml8jxG6YdvcIO86jJW4gmNNALP9+VROBGE5MtbyJlUNm/LHQ==}
+    engines: {node: '>=22'}
+
+  '@atproto/xrpc@0.8.21':
+    resolution: {integrity: sha512-s6+VJnhNk873SYJISlie6qxts135Mo0OtBLDFcsKqXmv4tGoVTr8PBD96IJE+9fsDR1w1+fSYNbd/H28rmD54A==}
     engines: {node: '>=22'}
 
   '@esbuild/aix-ppc64@0.28.2':
@@ -471,14 +492,14 @@ packages:
   fast-querystring@1.1.2:
     resolution: {integrity: sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==}
 
-  fast-uri@3.1.8:
-    resolution: {integrity: sha512-GZMtZUTNRpOVIECoXwLNZS5xUGE+mVNbTB8h/7Rwh2TFWcBQiPzTgyZi05BF9UMZKkLJv8XBRJTlU7zg8+ZfMg==}
+  fast-uri@3.1.9:
+    resolution: {integrity: sha512-hS/0Wt3Ya043oKXs0sIxrMpKQITXhMLIrVAKKXi4gozGC9v7YRWVnXIZzjNPTO02M9BdxLCWqK1yRXgNziVyJQ==}
 
-  fast-uri@4.2.1:
-    resolution: {integrity: sha512-TmHQgewjHtMq1E5QKA0tOE0yeYGQs25KZC/ziJpubRtWI15W92e6vPFydWOeZBVROSHBYw/QhD9d5OefdD6LDg==}
+  fast-uri@4.2.3:
+    resolution: {integrity: sha512-I1PXwP5eAhlNlcdpjt9CgB59op2ZvZfxw+BkqGFVIUOgNpCVTcTqp3HhTX7brxj5vsip+nSY4nTvff+eIA76hg==}
 
-  fastify@5.12.5:
-    resolution: {integrity: sha512-OB2k1dlxs5/NAABqeKV2FUHkSD2BbENsCak8yULVcymn3fHIPDVa9TI3SDnJSWYSllZmSYuZXy2gTnsT+Sut1A==}
+  fastify@5.12.7:
+    resolution: {integrity: sha512-v4pEPsTRPuqlDIYiQFB+BHjVN4SdHX9u0ABk0ZDUKbbdY1vsNryUd1j4Z+jQEZajvYIVk047Kimva9/AJ79GYw==}
 
   fastq@1.20.3:
     resolution: {integrity: sha512-XKv5nnLs6nLF71NgiKJLIZFLkPyIEuOselLG7ujZnGrRfQK8HpvY+WqKhAJUAdLomwVHErVS4LfxFlPq0/FTAw==}
@@ -525,8 +546,8 @@ packages:
     resolution: {integrity: sha512-bk1ZMTwG/Vymx+zPoa28MhNzucFvXJWp3csrSuxuHPSMeUettaCoQ5Jvg07mtC4JGNpcfTwz41oVCnNgBK9+vA==}
     hasBin: true
 
-  prettier@3.9.9:
-    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+  prettier@3.9.10:
+    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -621,58 +642,65 @@ packages:
   undici-types@7.24.6:
     resolution: {integrity: sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==}
 
-  undici@6.29.0:
-    resolution: {integrity: sha512-R+RODBqp6i2pPflGdq+xIOUkl+RNfGgHwoinecKu/JCuf2uO06cOKoDbI2P7Dn6KcswdKwrczbU6IYJ6K8X+wg==}
+  undici@6.29.1:
+    resolution: {integrity: sha512-EvRlUt/QqAEvXdQeRMYUfwOQsfzpDztykrG2owGEE/rBOBoYv9uF39ZzsNDh4lTFHhTr2XOZjKkYgueD12ZmGA==}
     engines: {node: '>=18.17'}
 
-  undici@7.30.0:
-    resolution: {integrity: sha512-dkrQXeHSaoamnItlYbmzG0wFYrM0ZwDxCIg0A7aKjTyyhh9svRzCNFEzV+Vm05/yehjCzjDZ31KXfGEjYSztDQ==}
+  undici@7.30.2:
+    resolution: {integrity: sha512-mLyPQnHwUxaM/rideoK/+KL8DaAJLRl4aBCfmX444aCSLnIaomqPLtNRe2jdCYcsk5wZzXrDIQC8ZeYNRAYyIA==}
     engines: {node: '>=20.18.1'}
 
-  undici@8.11.2:
-    resolution: {integrity: sha512-u4UB2/IrKdU6lFxumHmmo1a3fCQO5tzQllRorfoRS63txhrB7xTpSn1PftwC4qEHkOaqP95fCWW4lJzwErwzhQ==}
+  undici@8.13.1:
+    resolution: {integrity: sha512-Kt7EaPjh0s93lJH/PmW3d5rhkcpUa6fS3jqZ7+YGxNd9L7Xy/i827xe4C2uhhq+pJebM4tQOl5AgHmW11G5Skg==}
     engines: {node: '>=22.19.0'}
 
   unicode-segmenter@0.14.5:
     resolution: {integrity: sha512-jHGmj2LUuqDcX3hqY12Ql+uhUTn8huuxNZGq7GvtF6bSybzH3aFgedYu/KTzQStEgt1Ra2F3HxadNXsNjb3m3g==}
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
 
 snapshots:
 
-  '@atproto-labs/fetch-node@0.4.0':
+  '@atproto-labs/fetch-node@0.4.5':
     dependencies:
-      '@atproto-labs/fetch': 0.3.6
-      '@atproto-labs/pipe': 0.2.4
+      '@atproto-labs/fetch': 0.4.3
+      '@atproto-labs/pipe': 0.2.5
       ipaddr.js: 2.5.0
-      undici_v6: undici@6.29.0
-      undici_v7: undici@7.30.0
-      undici_v8: undici@8.11.2
+      undici_v6: undici@6.29.1
+      undici_v7: undici@7.30.2
+      undici_v8: undici@8.13.1
 
-  '@atproto-labs/fetch@0.3.6':
+  '@atproto-labs/fetch@0.4.3':
     dependencies:
-      '@atproto-labs/pipe': 0.2.4
+      '@atproto-labs/pipe': 0.2.5
 
-  '@atproto-labs/pipe@0.2.4': {}
+  '@atproto-labs/pipe@0.2.5': {}
 
-  '@atproto/api@0.24.0':
+  '@atproto/api@0.28.0':
     dependencies:
-      '@atproto/common-web': 0.5.14
-      '@atproto/lexicon': 0.7.16
-      '@atproto/syntax': 0.7.6
-      '@atproto/xrpc': 0.8.15
+      '@atproto/common-web': 0.5.20
+      '@atproto/lexicon': 0.7.22
+      '@atproto/syntax': 0.7.7
+      '@atproto/xrpc': 0.8.21
       await-lock: 3.0.0
       multiformats: 13.4.2
       tlds: 1.261.0
-      zod: 3.25.76
+      zod: 4.6.6
 
   '@atproto/common-web@0.5.14':
     dependencies:
       '@atproto/lex-data': 0.1.8
       '@atproto/lex-json': 0.1.7
-      '@atproto/syntax': 0.7.6
-      zod: 3.25.76
+      '@atproto/syntax': 0.7.7
+      zod: 4.6.6
+
+  '@atproto/common-web@0.5.20':
+    dependencies:
+      '@atproto/lex-data': 0.1.11
+      '@atproto/lex-json': 0.1.11
+      '@atproto/syntax': 0.7.9
+      zod: 4.6.6
 
   '@atproto/common@0.8.5':
     dependencies:
@@ -690,7 +718,7 @@ snapshots:
 
   '@atproto/identity@0.5.16':
     dependencies:
-      '@atproto-labs/fetch-node': 0.4.0
+      '@atproto-labs/fetch-node': 0.4.5
       '@atproto/common-web': 0.5.14
       '@atproto/crypto': 0.5.7
 
@@ -700,33 +728,49 @@ snapshots:
       cborg: 4.5.8
       tslib: 2.8.1
 
+  '@atproto/lex-data@0.1.11':
+    dependencies:
+      multiformats: 13.4.2
+      tslib: 2.8.1
+      unicode-segmenter: 0.14.5
+
   '@atproto/lex-data@0.1.8':
     dependencies:
       multiformats: 13.4.2
       tslib: 2.8.1
       unicode-segmenter: 0.14.5
 
+  '@atproto/lex-json@0.1.11':
+    dependencies:
+      '@atproto/lex-data': 0.1.11
+      tslib: 2.8.1
+
   '@atproto/lex-json@0.1.7':
     dependencies:
       '@atproto/lex-data': 0.1.8
       tslib: 2.8.1
 
-  '@atproto/lexicon@0.7.16':
+  '@atproto/lexicon@0.7.22':
     dependencies:
-      '@atproto/common-web': 0.5.14
-      '@atproto/syntax': 0.7.6
+      '@atproto/common-web': 0.5.20
+      '@atproto/syntax': 0.7.9
       multiformats: 13.4.2
-      zod: 3.25.76
+      zod: 4.6.6
 
-  '@atproto/syntax@0.7.6':
+  '@atproto/syntax@0.7.7':
     dependencies:
       iso-datestring-validator: 2.2.2
       tslib: 2.8.1
 
-  '@atproto/xrpc@0.8.15':
+  '@atproto/syntax@0.7.9':
     dependencies:
-      '@atproto/lexicon': 0.7.16
-      zod: 3.25.76
+      iso-datestring-validator: 2.2.2
+      tslib: 2.8.1
+
+  '@atproto/xrpc@0.8.21':
+    dependencies:
+      '@atproto/lexicon': 0.7.22
+      zod: 4.6.6
 
   '@esbuild/aix-ppc64@0.28.2':
     optional: true
@@ -810,7 +854,7 @@ snapshots:
     dependencies:
       ajv: 8.20.0
       ajv-formats: 3.0.1(ajv@8.20.0)
-      fast-uri: 4.2.1
+      fast-uri: 4.2.3
 
   '@fastify/error@4.2.0': {}
 
@@ -916,7 +960,7 @@ snapshots:
   ajv@8.20.0:
     dependencies:
       fast-deep-equal: 3.1.3
-      fast-uri: 3.1.8
+      fast-uri: 3.1.9
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
@@ -973,7 +1017,7 @@ snapshots:
       '@fastify/merge-json-schemas': 0.2.1
       ajv: 8.20.0
       ajv-formats: 3.0.1(ajv@8.20.0)
-      fast-uri: 4.2.1
+      fast-uri: 4.2.3
       json-schema-ref-resolver: 3.0.0
       rfdc: 1.4.1
 
@@ -981,11 +1025,11 @@ snapshots:
     dependencies:
       fast-decode-uri-component: 1.0.1
 
-  fast-uri@3.1.8: {}
+  fast-uri@3.1.9: {}
 
-  fast-uri@4.2.1: {}
+  fast-uri@4.2.3: {}
 
-  fastify@5.12.5:
+  fastify@5.12.7:
     dependencies:
       '@fastify/ajv-compiler': 4.0.6
       '@fastify/error': 4.2.0
@@ -1056,7 +1100,7 @@ snapshots:
       sonic-boom: 4.2.1
       thread-stream: 4.2.0
 
-  prettier@3.9.9: {}
+  prettier@3.9.10: {}
 
   process-warning@4.0.1: {}
 
@@ -1143,12 +1187,12 @@ snapshots:
 
   undici-types@7.24.6: {}
 
-  undici@6.29.0: {}
+  undici@6.29.1: {}
 
-  undici@7.30.0: {}
+  undici@7.30.2: {}
 
-  undici@8.11.2: {}
+  undici@8.13.1: {}
 
   unicode-segmenter@0.14.5: {}
 
-  zod@3.25.76: {}
+  zod@4.6.6: {}

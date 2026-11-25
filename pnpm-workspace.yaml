@@ -1,4 +1,12 @@
 allowBuilds:
   esbuild: true
-minimumReleaseAgeExclude:
-  - '@atproto/api@0.24.0'
+
+# Force patched versions of transitive deps with known CVEs.
+# Remove each override when upstream pins a safe version.
+# - zod 4.6.6: GHSA-mrhx-c7xc-m3w5 (DoS via oversized collection validation)
+# - fast-uri 3.1.9 / 4.2.3: GHSA-w74x-v6f9-j3xg (URI scheme spoofing) and
+#   GHSA-wjr9-j795-jxcr (host confusion via WHATWG canonicalization)
+overrides:
+  zod: "4.6.6"
+  "fast-uri@<3.1.9": "3.1.9"
+  "fast-uri@>=4.0.0 <4.2.3": "4.2.3"
