@@ -27,18 +27,18 @@
     "operator": "node dist/src/cli.js"
   },
   "dependencies": {
-    "@atproto-labs/fetch-node": "0.4.5",
-    "@atproto/api": "0.28.0",
+    "@atproto-labs/fetch-node": "0.4.0",
+    "@atproto/api": "0.24.0",
     "@atproto/common": "0.8.5",
     "@atproto/identity": "0.5.16",
-    "@atproto/syntax": "0.7.7",
+    "@atproto/syntax": "0.7.6",
     "@streamparser/json-node": "0.0.26",
-    "fastify": "5.12.7",
+    "fastify": "5.12.5",
     "tldts": "7.4.18"
   },
   "devDependencies": {
     "@types/node": "24.19.1",
-    "prettier": "3.9.10",
+    "prettier": "3.9.9",
     "tsx": "4.23.15",
     "typescript": "7.0.2"
   }
