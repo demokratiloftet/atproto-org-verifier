@@ -29,9 +29,7 @@ jobs:
       - run: pnpm audit --audit-level=moderate
       - run: pnpm --dir fixture install --frozen-lockfile
       - run: pnpm --dir fixture typecheck
-      # Fixture is isolated test infrastructure — not deployed. Audit at
-      # critical only; known CVEs are patched via fixture/pnpm-workspace.yaml.
-      - run: pnpm --dir fixture audit --audit-level=critical
+      - run: pnpm --dir fixture audit --audit-level=moderate
       - run: pnpm format:check
       - run: pnpm check
       - run: pnpm demo:up
