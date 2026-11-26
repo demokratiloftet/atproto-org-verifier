@@ -18,12 +18,16 @@ minimumReleaseAgeExclude:
   - '@atproto/pds@0.5.38'
   - nodemailer@10.0.16
 
+# Fixture is isolated test infrastructure. Overrides patch transitive CVEs
+# that dep-review flags on PRs. Remove when upstream pins a safe version.
+# - @hapi/content <6.0.3: GHSA-8494-f6mr-cjpv (quadratic-time DoS in parser)
 overrides:
   '@fastify/busboy': '3.2.2'
   'sharp': '0.35.5'
   'kysely': '0.29.6'
   'nodemailer': '10.0.16'
   'undici@<6.28.1': '6.29.0'
+  '@hapi/content@<6.0.3': '6.0.3'
   '@opentelemetry/propagator-jaeger': '2.12.0'
   '@opentelemetry/instrumentation-cassandra-driver': '0.66.0'
   '@opentelemetry/instrumentation-knex': '0.65.0'
