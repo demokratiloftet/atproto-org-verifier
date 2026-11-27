@@ -8,6 +8,16 @@ allowBuilds:
   protobufjs: true
   sharp: true
 
+# GHSA-mrhx-c7xc-m3w5: zod memory DoS on oversized constrained collections.
+# Only fixed in zod >=4.6.6, but @atproto/oauth-provider pins zod ^3.23.8
+# because it uses the v3-only .refinement() API. Forcing zod to 4.x breaks
+# runtime. The fixture runs on compose's internal: true network with no
+# external reachability, and only the app container talks to it; adversarial
+# input is not in the threat model.
+auditConfig:
+  ignoreGhsas:
+    - GHSA-mrhx-c7xc-m3w5
+
 minimumReleaseAgeExclude:
   - '@atproto-labs/opentelemetry-node@0.3.1'
   - '@atproto/api@0.24.0'
@@ -18,12 +28,28 @@ minimumReleaseAgeExclude:
   - '@atproto/pds@0.5.38'
   - nodemailer@10.0.16
 
+# Fixture is isolated test infrastructure. Overrides patch transitive CVEs
+# that dep-review flags on PRs. Remove when upstream pins a safe version.
+# - @hapi/content <6.0.3: GHSA-8494-f6mr-cjpv (quadratic-time DoS in parser)
+# - follow-redirects <1.16.2: GHSA-mrwp-f3q8-3g9p (cross-realm credential leak)
+# - systeminformation <5.33.16: GHSA-3f7j-7jwc-fxfj (Windows cmd injection; N/A on Linux)
+# - undici <6.29.1: multiple CVEs (DoS, TLS cert bypass, cache poisoning)
+# - nodemailer <10.1.4: GHSA-8c8m-p3m8-cjg8, GHSA-m943-m63m-w62w, GHSA-85x2-q946-cp5h
+# - qs <=6.16.0: GHSA-6pq8-jhm2-2vcw (DoS via arrayFormat comma)
+# - glob <=14.0.1: GHSA-3g3m-2fjr-6pw4 (AbortSignal bypass)
+# - minimatch <11.0.1: GHSA-g3hv-75wg-m249 (globparts DoS)
 overrides:
   '@fastify/busboy': '3.2.2'
   'sharp': '0.35.5'
   'kysely': '0.29.6'
-  'nodemailer': '10.0.16'
-  'undici@<6.28.1': '6.29.0'
+  'nodemailer@<10.1.4': '10.1.4'
+  'undici@<6.29.1': '6.29.1'
+  '@hapi/content@<6.0.3': '6.0.3'
+  'follow-redirects@<1.16.2': '1.16.2'
+  'systeminformation@<5.33.16': '5.33.16'
+  'qs@<=6.16.0': '6.16.1'
+  'glob@<=14.0.1': '14.0.2'
+  'minimatch@<11.0.1': '11.0.1'
   '@opentelemetry/propagator-jaeger': '2.12.0'
   '@opentelemetry/instrumentation-cassandra-driver': '0.66.0'
   '@opentelemetry/instrumentation-knex': '0.65.0'

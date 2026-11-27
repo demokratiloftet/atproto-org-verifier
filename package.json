@@ -31,14 +31,14 @@
     "@atproto/api": "0.32.5",
     "@atproto/common": "0.8.12",
     "@atproto/identity": "0.5.16",
-    "@atproto/syntax": "0.7.6",
+    "@atproto/syntax": "0.7.7",
     "@streamparser/json-node": "0.0.26",
     "fastify": "5.12.8",
     "tldts": "7.5.5"
   },
   "devDependencies": {
     "@types/node": "24.19.1",
-    "prettier": "3.9.9",
+    "prettier": "3.9.10",
     "tsx": "4.23.15",
     "typescript": "7.0.2"
   }
