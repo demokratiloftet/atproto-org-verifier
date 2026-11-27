@@ -33,6 +33,9 @@ jobs:
       - run: pnpm test:integration
       - run: pnpm test:worker-integration
       - run: pnpm test:isolation
+      - name: Dump container logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail=500
       - if: always()
         run: docker compose down
   deploy:
