@@ -42,8 +42,8 @@ importers:
         specifier: 24.19.1
         version: 24.19.1
       prettier:
-        specifier: 3.9.10
-        version: 3.9.10
+        specifier: 3.10.1
+        version: 3.10.1
       tsx:
         specifier: 4.23.15
         version: 4.23.15
@@ -554,8 +554,8 @@ packages:
     resolution: {integrity: sha512-bk1ZMTwG/Vymx+zPoa28MhNzucFvXJWp3csrSuxuHPSMeUettaCoQ5Jvg07mtC4JGNpcfTwz41oVCnNgBK9+vA==}
     hasBin: true
 
-  prettier@3.9.10:
-    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+  prettier@3.10.1:
+    resolution: {integrity: sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -658,8 +658,8 @@ packages:
     resolution: {integrity: sha512-mLyPQnHwUxaM/rideoK/+KL8DaAJLRl4aBCfmX444aCSLnIaomqPLtNRe2jdCYcsk5wZzXrDIQC8ZeYNRAYyIA==}
     engines: {node: '>=20.18.1'}
 
-  undici@8.13.1:
-    resolution: {integrity: sha512-Kt7EaPjh0s93lJH/PmW3d5rhkcpUa6fS3jqZ7+YGxNd9L7Xy/i827xe4C2uhhq+pJebM4tQOl5AgHmW11G5Skg==}
+  undici@8.12.4:
+    resolution: {integrity: sha512-8Mx+uNKKER2bA4AdtedkqRbwUCIJFr2nJckXRe5yrDqzePqwLP7VNcctN8/XdmDSbF7mS+jJKIszlL+vbam1VA==}
     engines: {node: '>=22.19.0'}
 
   unicode-segmenter@0.14.5:
@@ -677,7 +677,7 @@ snapshots:
       ipaddr.js: 2.5.0
       undici_v6: undici@6.29.1
       undici_v7: undici@7.30.2
-      undici_v8: undici@8.13.1
+      undici_v8: undici@8.12.4
 
   '@atproto-labs/fetch-node@0.4.5':
     dependencies:
@@ -686,7 +686,7 @@ snapshots:
       ipaddr.js: 2.5.0
       undici_v6: undici@6.29.1
       undici_v7: undici@7.30.2
-      undici_v8: undici@8.13.1
+      undici_v8: undici@8.12.4
 
   '@atproto-labs/fetch@0.3.6':
     dependencies:
@@ -1121,7 +1121,7 @@ snapshots:
       sonic-boom: 4.2.1
       thread-stream: 4.2.0
 
-  prettier@3.9.10: {}
+  prettier@3.10.1: {}
 
   process-warning@4.0.1: {}
 
@@ -1212,7 +1212,7 @@ snapshots:
 
   undici@7.30.2: {}
 
-  undici@8.13.1: {}
+  undici@8.12.4: {}
 
   unicode-segmenter@0.14.5: {}
 
